@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1deepspace.Controller">
+    <children>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onClickChooseFile" text="Choose File" />
+        <Label layoutX="64.0" layoutY="368.0" text="Brightness" />
+        <Slider fx:id="sliderbright" blockIncrement="0.1" layoutX="22.0" layoutY="342.0" max="255.0" min="0.0" onMouseDragged="#blackAndWhite" showTickLabels="true" value="127.0" />
+        <Button fx:id="BandWimage" layoutX="384.0" layoutY="343.0" mnemonicParsing="false" onAction="#blackAndWhite" text="Black and White" />
+        <Button fx:id="circlesbutton" layoutX="176.0" layoutY="343.0" mnemonicParsing="false" onAction="#displayBlueCircles" text="Display Circles" />
+        <Button fx:id="numcircles" layoutX="277.0" layoutY="343.0" mnemonicParsing="false" onAction="#numberCircles" text="Number Circles" />
+        <Pane layoutX="14.0" layoutY="49.0" prefHeight="278.0" prefWidth="278.0">
+            <children>
+                <ImageView fx:id="colorImage" fitHeight="278.0" fitWidth="278.0" layoutY="-1.0"> </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="307.0" layoutY="49.0" prefHeight="278.0" prefWidth="278.0">
+            <children>
+                <ImageView fx:id="blackwhiteimagev" fitHeight="278.0" fitWidth="278.0" layoutY="-1.0" />
+            </children>
+        </Pane>
+        <Label fx:id="starcountlabel" layoutX="178.0" layoutY="377.0" text="Number Of Stars:" />
+      <Button fx:id="resetbutton" layoutX="497.0" layoutY="343.0" mnemonicParsing="false" onAction="#resetAll" text="Reset All" />
+      <Button fx:id="reducenoisebutton" layoutX="390.0" layoutY="373.0" mnemonicParsing="false" text="Reduce Noise" onAction="#reduceNoise" />
+      <Button layoutX="486.0" layoutY="373.0" mnemonicParsing="false" onAction="#getDisjointSetSizes" text="Disjoint Set Size" />
+      <Button fx:id="colordisjointsetsbutton" layoutX="101.0" layoutY="14.0" mnemonicParsing="false" onAction="#colorDisjointSets" text="Color Disjoint Sets" />
+      <Slider fx:id="minPixelsInStarSlider" layoutX="222.0" layoutY="8.0" showTickLabels="true" showTickMarks="true" min="0.0" max="250.0" blockIncrement="1.0"  />
+
+    </children>
+</AnchorPane>
